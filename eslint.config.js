@@ -30,6 +30,12 @@ export default tseslint.config(
     languageOptions: { globals: globals.browser },
   },
 
+  // Turn off TS-specific unused-vars on plain browser JS
+  {
+    files: ['assets/js/**/*.js'],
+    rules: { '@typescript-eslint/no-unused-vars': 'off' },
+  },
+
   // Prettier compatibility
   prettier,
 );
