@@ -1,6 +1,6 @@
 # Repository Verification Report
 
-Generated at (UTC): 2025-09-11 15:28:46
+Generated at (UTC): 2025-09-11 15:35:48
 
 ## Environment
 
@@ -62,11 +62,11 @@ OK - mkdocs.yml
 ## GitHub Actions (latest 5)
 
 ```
+completed	success	chore(verify): add VERIFY_REPORT.md	CI	chore/verify-report	push	17649546677	24s	2025-09-11T15:31:01Z
 completed	success	UI prototypes & assets relocation	CI	feat/ui-prototypes	pull_request	17647466547	24s	2025-09-11T14:17:04Z
 completed	success	feat(ui): add prototypes (lesson/quiz/exam/dashboard) and move assets…	CI	feat/ui-prototypes	push	17647463291	21s	2025-09-11T14:16:57Z
 completed	success	fix(lint): avoid empty catch block in dashboard.js	CI	feat/ui-prototypes	push	17647444640	22s	2025-09-11T14:16:19Z
 completed	failure	docs(mkdocs): add extra_css/js and prototypes nav	CI	feat/ui-prototypes	push	17647308942	10s	2025-09-11T14:11:36Z
-completed	failure	chore(move): relocate quiz assets; chore(lint): browser env for conte…	CI	feat/ui-prototypes	push	17646986380	13s	2025-09-11T14:00:26Z
 ```
 
 ---
