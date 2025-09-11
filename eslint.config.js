@@ -10,6 +10,7 @@ export default tseslint.config(
 
   // JavaScript baseline (apply to JS files)
   { files: ['**/*.js'], ...js.configs.recommended },
+  { files: ['**/*.js'], rules: { '@typescript-eslint/no-unused-vars': 'off' } },
 
   // TypeScript recommended rules
   ...tseslint.configs.recommended,
