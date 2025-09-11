@@ -1,4 +1,3 @@
 export default {
-  greeting: 'こんにちは、{name}！'
-} as const;
-
+  greeting: 'こんにちは、{name}！',
+};
