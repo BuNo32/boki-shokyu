@@ -1,0 +1,27 @@
+site_name: 簿記初級ラボ
+site_url: ""
+repo_url: ""
+theme:
+  name: material
+  language: ja
+
+docs_dir: content
+use_directory_urls: false
+
+nav:
+  - はじめに: index.md
+  - 第1章 簿記の基本原理: ch01/index.md
+  - 第5章 現金・預金: ch05/index.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - footnotes
+
+plugins:
+  - search
+
+extra_javascript:
+  - assets/js/quiz.js
