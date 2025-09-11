@@ -8,10 +8,19 @@ theme:
 docs_dir: content
 use_directory_urls: false
 
+extra_css:
+  - assets/css/site.css
+
 nav:
   - はじめに: index.md
   - 第1章 簿記の基本原理: ch01/index.md
   - 第5章 現金・預金: ch05/index.md
+  - デザイン見本:
+      - レッスン見本: prototypes/lesson-sample.md
+      - クイズ見本: prototypes/quiz-sample.md
+      - 模擬試験見本: prototypes/exam-sample.md
+      - ダッシュボード: prototypes/dashboard.md
+      - タイポグラフィ: prototypes/typography.md
 
 markdown_extensions:
   - admonition
@@ -25,3 +34,5 @@ plugins:
 
 extra_javascript:
   - assets/js/quiz.js
+  - assets/js/exam.js
+  - assets/js/dashboard.js

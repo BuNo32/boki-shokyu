@@ -26,13 +26,13 @@ export default tseslint.config(
 
   // Browser globals for client-side JS
   {
-    files: ['assets/js/**/*.js'],
+    files: ['assets/js/**/*.js', 'content/assets/js/**/*.js'],
     languageOptions: { globals: globals.browser },
   },
 
   // Turn off TS-specific unused-vars on plain browser JS
   {
-    files: ['assets/js/**/*.js'],
+    files: ['assets/js/**/*.js', 'content/assets/js/**/*.js'],
     rules: { '@typescript-eslint/no-unused-vars': 'off' },
   },
 
