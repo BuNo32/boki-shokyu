@@ -1,0 +1,4 @@
+mkdocs>=1.6.0
+mkdocs-material>=9.5.0
+jsonschema>=4.22.0
+

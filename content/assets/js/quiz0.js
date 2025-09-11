@@ -1,48 +1,24 @@
-// content/assets/js/quiz.js
-async function loadQuiz(jsonPath, mountId, options) {
+// assets/js/quiz.js
+async function loadQuiz(jsonPath, mountId) {
   const el = document.getElementById(mountId);
   if (!el) {
     console.warn('mount element not found:', mountId);
     return;
   }
 
-  let items;
+  let data;
   try {
+    // 相対パス運用（use_directory_urls:false 前提）
     const res = await fetch(jsonPath, { cache: 'no-store' });
-    items = await res.json();
+    data = await res.json();
   } catch (e) {
     el.innerHTML = `<p style="color:red">クイズの読み込みに失敗しました: ${e}</p>`;
     return;
   }
-  if (!Array.isArray(items)) {
-    el.textContent = 'クイズJSONは配列形式である必要があります。';
-    return;
-  }
 
-  const keyBase =
-    options && options.quizId ? `quiz:${options.quizId}` : location.pathname + ':' + mountId;
-  let score = Number(localStorage.getItem(`${keyBase}:score`) || 0);
-  const total = items.length;
-  localStorage.setItem(`${keyBase}:total`, String(total));
+  let score = 0;
 
-  // 要約（スコアバー）
-  const summary = document.createElement('div');
-  const summaryText = document.createElement('div');
-  const bar = document.createElement('div');
-  bar.className = 'progress';
-  const barInner = document.createElement('span');
-  bar.appendChild(barInner);
-  summary.appendChild(summaryText);
-  summary.appendChild(bar);
-  el.appendChild(summary);
-
-  function updateSummary() {
-    summaryText.textContent = `現在の正解数: ${score} / 全${total}問`;
-    barInner.style.width = `${Math.round((100 * Math.min(score, total)) / Math.max(total, 1))}%`;
-  }
-  updateSummary();
-
-  items.forEach((q, i) => {
+  data.forEach((q, i) => {
     const qWrap = document.createElement('section');
     qWrap.className = 'q';
     const h = document.createElement('h3');
@@ -51,13 +27,13 @@ async function loadQuiz(jsonPath, mountId, options) {
 
     const meta = document.createElement('div');
     meta.className = 'meta';
-    meta.textContent = `［${q.difficulty || '-'} / ${q.question_type || '-'}］`;
+    meta.textContent = `［${q.difficulty} / ${q.question_type}］`;
     qWrap.appendChild(meta);
 
     let inputArea = document.createElement('div');
 
     if (q.question_type === 'term_mcq' || q.question_type === 'journal_mcq') {
-      (q.choices || []).forEach((ch, idx) => {
+      q.choices?.forEach((ch, idx) => {
         const id = `q${i}_${idx}`;
         const lab = document.createElement('label');
         lab.htmlFor = id;
@@ -80,7 +56,8 @@ async function loadQuiz(jsonPath, mountId, options) {
             <td><input name="dr_amt" type="number" min="0" step="1"></td>
             <td><input name="cr_acc" placeholder="例：普通預金"></td>
             <td><input name="cr_amt" type="number" min="0" step="1"></td>
-          </tr>`;
+          </tr>
+        </table>`;
     } else {
       inputArea.textContent = '未対応形式';
     }
@@ -90,10 +67,9 @@ async function loadQuiz(jsonPath, mountId, options) {
     btn.textContent = '採点';
     const fb = document.createElement('p');
     fb.className = 'fb';
-    fb.dataset.answeredCorrect = '0';
     btn.onclick = () => {
       let correct = false;
-      if (q.question_type && q.question_type.endsWith('mcq')) {
+      if (q.question_type.endsWith('mcq')) {
         const sel = inputArea.querySelector('input[type="radio"]:checked');
         correct = sel && String(sel.value) === String(q.answer);
       } else if (q.question_type === 'journal_input') {
@@ -110,14 +86,10 @@ async function loadQuiz(jsonPath, mountId, options) {
         );
         correct = drOk && crOk && drAmt === crAmt && drAmt > 0;
       }
-      fb.textContent = correct ? '✅ 正解！' : `❌ 不正解。ヒント：${q.explanation_ja || ''}`;
-
-      // 二重加点防止
-      if (correct && fb.dataset.answeredCorrect !== '1') {
-        fb.dataset.answeredCorrect = '1';
+      fb.textContent = correct ? '✅ 正解！' : `❌ 不正解。ヒント：${q.explanation_ja}`;
+      if (correct) {
         score++;
-        localStorage.setItem(`${keyBase}:score`, String(score));
-        updateSummary();
+        localStorage.setItem(location.pathname + ':' + mountId, String(score));
       }
     };
     qWrap.appendChild(btn);
