@@ -186,12 +186,18 @@ async function loadQuiz(jsonPath, mountId, options) {
     }
     qWrap.appendChild(inputArea);
 
+    // 採点ボタン（クリック枠つき）
+    const frame = document.createElement('div');
+    frame.className = 'score-frame';
+    frame.setAttribute('role', 'button');
+    frame.setAttribute('tabindex', '0');
     const btn = document.createElement('button');
     btn.textContent = '採点';
+    frame.appendChild(btn);
     const fb = document.createElement('p');
     fb.className = 'fb';
     fb.dataset.answeredCorrect = '0';
-    btn.onclick = () => {
+    const handleScore = () => {
       let correct = false;
       if (q.question_type && q.question_type.endsWith('mcq')) {
         const sel = inputArea.querySelector('input[type="radio"]:checked');
@@ -262,7 +268,21 @@ async function loadQuiz(jsonPath, mountId, options) {
         fb.textContent = '✅ 正解！（既に加点済み）';
       }
     };
-    qWrap.appendChild(btn);
+    btn.onclick = (e) => {
+      e.preventDefault();
+      handleScore();
+    };
+    frame.onclick = (e) => {
+      e.preventDefault();
+      handleScore();
+    };
+    frame.onkeydown = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleScore();
+      }
+    };
+    qWrap.appendChild(frame);
     qWrap.appendChild(fb);
     el.appendChild(qWrap);
   });
