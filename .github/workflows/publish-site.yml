@@ -23,6 +23,37 @@ jobs:
       - name: Build MkDocs site
         run: mkdocs build --strict
 
+      - name: Prepare Pages workflow in publish dir
+        run: |
+          mkdir -p site/.github/workflows
+          cat > site/.github/workflows/pages.yml <<'WF'
+          name: Pages
+          on:
+            push:
+              branches: [main]
+            workflow_dispatch:
+          permissions:
+            contents: read
+            pages: write
+            id-token: write
+          concurrency:
+            group: pages
+            cancel-in-progress: true
+          jobs:
+            deploy:
+              runs-on: ubuntu-latest
+              steps:
+                - uses: actions/checkout@v4
+                - uses: actions/configure-pages@v5
+                  with:
+                    enablement: true
+                - uses: actions/upload-pages-artifact@v3
+                  with:
+                    path: .
+                - id: deployment
+                  uses: actions/deploy-pages@v4
+          WF
+
       - name: Publish to public repo
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -33,4 +64,4 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_message: "docs: publish from ${{ github.repository }}@${{ github.sha }}"
-
+          keep_files: true
