@@ -1,9 +1,10 @@
 site_name: 簿記初級ラボ
-site_url: ""
+site_url: "https://buno32.github.io/boki-shokyu-site/"
 repo_url: ""
 theme:
   name: material
   language: ja
+  font: false
 
 docs_dir: content
 use_directory_urls: false
