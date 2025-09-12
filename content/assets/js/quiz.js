@@ -195,7 +195,16 @@ async function loadQuiz(jsonPath, mountId, options) {
       let correct = false;
       if (q.question_type && q.question_type.endsWith('mcq')) {
         const sel = inputArea.querySelector('input[type="radio"]:checked');
-        correct = sel && String(sel.value) === String(q.answer);
+        if (!sel) {
+          fb.textContent = '選択してください。';
+          return;
+        }
+        correct = String(sel.value) === String(q.answer);
+        if (!correct) {
+          fb.textContent = q.explanation_ja
+            ? `❌ 不正解。ヒント：${q.explanation_ja}`
+            : '❌ 不正解。';
+        }
       } else if (q.question_type === 'journal_input') {
         // 入力値を4列×2段から収集
         const entries = [];
@@ -237,8 +246,10 @@ async function loadQuiz(jsonPath, mountId, options) {
           }
         });
         correct = matched === expected.length && used.filter((x) => x).length === expected.length;
-        if (!correct && q.explanation_ja) {
-          fb.textContent = `❌ 不正解。ヒント：${q.explanation_ja}`;
+        if (!correct) {
+          fb.textContent = q.explanation_ja
+            ? `❌ 不正解。ヒント：${q.explanation_ja}`
+            : '❌ 不正解。';
         }
       }
       if (correct && fb.dataset.answeredCorrect !== '1') {
