@@ -6,7 +6,7 @@ import globals from 'globals';
 
 export default tseslint.config(
   // Ignore common folders and config files
-  { ignores: ['dist/**', 'node_modules/**', '.husky/**', '**/*.config.*', '**/*.cjs'] },
+  { ignores: ['dist/**', 'node_modules/**', 'site/**', '.husky/**', '**/*.config.*', '**/*.cjs'] },
 
   // JavaScript baseline (apply to JS files)
   { files: ['**/*.js'], ...js.configs.recommended },
