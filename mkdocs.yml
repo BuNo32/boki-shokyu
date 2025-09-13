@@ -5,6 +5,10 @@ theme:
   name: material
   language: ja
   font: false
+  features:
+    - navigation.path       # パンくず
+    - navigation.footer     # 前へ/次へ（フッター）
+    - navigation.top        # トップに戻るボタン
 
 docs_dir: content
 use_directory_urls: false
