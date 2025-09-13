@@ -16,10 +16,10 @@ nav:
   - はじめに: index.md
   - 第1章 簿記の基本原理: ch01/index.md
   - 第5章 現金・預金:
-      - 目次: ch05/index.md
-      - 第1節 基本: ch05/01-basics.md
-      - 第2節 パターン: ch05/02-patterns.md
-      - 第3節 資金移動: ch05/03-transfers.md
+      - 章の目次: ch05/index.md
+      - 1節 勘定の性質と増減: ch05/01-basics.md
+      - 2節 よくある取引の型: ch05/02-patterns.md
+      - 3節 資金移動・利息・手数料: ch05/03-transfers.md
       - 章末クイズ: ch05/99-quiz.md
   - デザイン見本:
       - レッスン見本: prototypes/lesson-sample.md
@@ -27,6 +27,7 @@ nav:
       - 模擬試験見本: prototypes/exam-sample.md
       - ダッシュボード: prototypes/dashboard.md
       - タイポグラフィ: prototypes/typography.md
+
 
 markdown_extensions:
   - admonition

@@ -1,15 +1,11 @@
-# 第5章 現金・預金 — 章末クイズ
+# 第5章 章末クイズ
 
-以下のクイズで理解度を確認しましょう。
+<div id="quiz-ch05"
+     data-quiz-src="../quizzes/ch05.json"
+     data-quiz-id="ch05"
+     data-accounts-src="../assets/data/accounts.ch05.json"></div>
 
-<div id="quiz-ch05"></div>
+!!! tip "学習のヒント"
+複合仕訳（借2・貸1 等）は**借貸合計の一致**を先に確認すると正答率が上がります。
 
-<script>
-  // 4列仕訳UI + ch05科目ドロップダウンを有効化
-  // loadQuiz は遅延キューに積み、quiz.js 読込後に実行されます。
-  window.__loadQuizQueue = window.__loadQuizQueue || [];
-  window.__loadQuizQueue.push(['../quizzes/ch05.json','quiz-ch05', {
-    quizId: 'ch05',
-    accountsSrc: '../assets/data/accounts.ch05.json'
-  }]);
-  </script>
+[← 3節 資金移動・利息・手数料](03-transfers.md)　／　[章の目次へ](index.md)
