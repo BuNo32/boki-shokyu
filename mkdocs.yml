@@ -11,7 +11,7 @@ use_directory_urls: false
 
 extra_css:
   - assets/css/site.css
-  - assets/css/site-append-ch05.css
+  - assets/css/teacher-ch05.css   # ← 追加
   # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
 nav:
@@ -23,6 +23,8 @@ nav:
       - 2節 よくある取引の型: ch05/02-patterns.md
       - 3節 資金移動・利息・手数料: ch05/03-transfers.md
       - 章末クイズ: ch05/99-quiz.md
+      - 用語ミニ辞典: ch05/glossary.md
+      - 印刷用チートシート: ch05/cheatsheet.md
   - デザイン見本:
       - レッスン見本: prototypes/lesson-sample.md
       - クイズ見本: prototypes/quiz-sample.md
