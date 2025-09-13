@@ -62,3 +62,79 @@ INFO    -  [22:40:29] Reloading browsers
 INFO    -  [22:40:48] Detected file changes
 INFO    -  Building documentation...
 INFO    -  [22:40:49] Reloading browsers
+INFO    -  [22:42:47] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [22:42:48] Reloading browsers
+INFO    -  [01:05:45] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.33 seconds
+INFO    -  [01:05:46] Reloading browsers
+INFO    -  [01:05:50] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:05:51] Reloading browsers
+INFO    -  [01:05:55] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:05:56] Reloading browsers
+INFO    -  [01:06:12] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:06:13] Reloading browsers
+INFO    -  [01:06:21] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:06:22] Reloading browsers
+INFO    -  [01:06:40] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:06:40] Reloading browsers
+INFO    -  [01:07:05] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:07:05] Reloading browsers
+INFO    -  [01:26:52] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:26:52] Reloading browsers
+INFO    -  [01:27:13] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:27:14] Reloading browsers
+INFO    -  [01:39:40] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.32 seconds
+INFO    -  [01:39:40] Reloading browsers
+INFO    -  [01:40:02] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:40:02] Reloading browsers
+INFO    -  [01:40:26] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [01:40:26] Reloading browsers
+INFO    -  [11:49:25] Detected file changes
+INFO    -  Building documentation...
+INFO    -  Documentation built in 0.28 seconds
+INFO    -  [11:49:25] Reloading browsers
+INFO    -  [11:49:32] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - ch05/01-basics.md
+INFO    -  Documentation built in 0.18 seconds
+INFO    -  [11:49:32] Reloading browsers
+INFO    -  [11:49:39] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - ch05/01-basics.md
+  - ch05/02-patterns.md
+INFO    -  [11:49:39] Reloading browsers
+INFO    -  [11:49:45] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - ch05/01-basics.md
+  - ch05/02-patterns.md
+  - ch05/03-transfers.md
+INFO    -  Documentation built in 0.17 seconds
+INFO    -  [11:49:45] Reloading browsers
+INFO    -  [11:49:49] Detected file changes
+INFO    -  Building documentation...
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - ch05/01-basics.md
+  - ch05/02-patterns.md
+  - ch05/03-transfers.md
+  - ch05/99-quiz.md
+INFO    -  [11:49:49] Reloading browsers
+INFO    -  [11:50:04] Detected file changes
+INFO    -  Building documentation...
+INFO    -  [11:50:05] Reloading browsers
