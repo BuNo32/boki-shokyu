@@ -11,6 +11,8 @@ use_directory_urls: false
 
 extra_css:
   - assets/css/site.css
+  - assets/css/site-append-ch05.css
+  # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
 nav:
   - はじめに: index.md
@@ -41,5 +43,7 @@ plugins:
 
 extra_javascript:
   - assets/js/quiz.js
+  - assets/js/quiz.progress.patch.js   # ← 追加（順番は quiz.js の直後）
   - assets/js/exam.js
   - assets/js/dashboard.js
+  # - assets/js/quiz.autoload.js  # （未使用: 存在しないため無効化）
