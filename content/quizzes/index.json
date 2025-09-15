@@ -22,6 +22,13 @@
       "basePath": "quizzes/"
     },
     {
+      "quizId": "ch04",
+      "title": "第4章 現金・預金（基礎）",
+      "file": "ch04.json",
+      "page": "ch04/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
       "quizId": "ch05",
       "title": "第5章 現金・預金",
       "file": "ch05.json",
