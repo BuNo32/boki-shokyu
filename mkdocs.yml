@@ -18,6 +18,7 @@ extra_css:
   - assets/css/ch05.css
   - assets/css/ch06.css
   - assets/css/ch07.css
+  - assets/css/ch08.css
   - assets/css/teacher-ch05.css # ← 追加
   # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
@@ -72,6 +73,13 @@ nav:
       - 3. 立替・預り・仮払・仮受: ch07/03-employee-and-temp.md
       - 4. 頻出パターン＆コツ: ch07/04-patterns-and-tips.md
       - 章末クイズ: ch07/99-quiz.md
+  - 第8章 手形・電子記録債権債務:
+      - 章の目次: ch08/index.md
+      - 1. 手形のキホン: ch08/01-notes-basics.md
+      - 2. 発生→決済（手形）: ch08/02-notes-transactions.md
+      - 3. 電子記録債権・債務: ch08/03-densai.md
+      - 4. コツ＆Q&A: ch08/04-tips-and-qa.md
+      - 章末クイズ: ch08/99-quiz.md
   - デザイン見本:
       - レッスン見本: prototypes/lesson-sample.md
       - クイズ見本: prototypes/quiz-sample.md
