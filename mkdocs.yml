@@ -1,6 +1,6 @@
 site_name: 簿記初級ラボ
-site_url: "https://buno32.github.io/boki-shokyu-site/"
-repo_url: ""
+site_url: 'https://buno32.github.io/boki-shokyu-site/'
+repo_url: ''
 theme:
   name: material
   language: ja
@@ -11,12 +11,35 @@ use_directory_urls: false
 
 extra_css:
   - assets/css/site.css
-  - assets/css/teacher-ch05.css   # ← 追加
+  - assets/css/ch01.css
+  - assets/css/ch02.css # ← 追加
+  - assets/css/ch03.css
+  - assets/css/teacher-ch05.css # ← 追加
   # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
 nav:
   - はじめに: index.md
-  - 第1章 簿記の基本原理: ch01/index.md
+  - 第1章 スタートガイド & 用語入門:
+      - 章の目次: ch01/index.md
+      - 1. なぜ簿記？: ch01/01-why-bookkeeping.md
+      - 2. 用語をやさしく: ch01/02-basic-terms.md
+      - 3. 借方・貸方: ch01/03-debit-credit.md
+      - 4. はじめての4列仕訳: ch01/04-first-journal.md
+      - 章末クイズ: ch01/99-quiz.md
+  - 第2章 取引→仕訳→転記→集計:
+      - 章の目次: ch02/index.md
+      - 1. 取引の正体: ch02/01-transaction.md
+      - 2. 仕訳帳: ch02/02-journal.md
+      - 3. 転記（元帳）: ch02/03-posting.md
+      - 4. 集計（試算表）: ch02/04-trial-balance.md
+      - 章末クイズ: ch02/99-quiz.md
+  - 第3章 帳簿と伝票:
+      - 章の目次: ch03/index.md
+      - 1. 帳簿の全体像と役割: ch03/01-overview.md
+      - 2. 伝票の使い分け: ch03/02-vouchers.md
+      - 3. 証ひょう→試算表の流れ: ch03/03-flow.md
+      - 4. 伝票フォームと運用のコツ: ch03/04-forms-and-tips.md
+      - 章末クイズ: ch03/99-quiz.md
   - 第5章 現金・預金:
       - 章の目次: ch05/index.md
       - 1節 勘定の性質と増減: ch05/01-basics.md
@@ -32,7 +55,6 @@ nav:
       - ダッシュボード: prototypes/dashboard.md
       - タイポグラフィ: prototypes/typography.md
 
-
 markdown_extensions:
   - admonition
   - attr_list
@@ -45,7 +67,7 @@ plugins:
 
 extra_javascript:
   - assets/js/quiz.js
-  - assets/js/quiz.progress.patch.js   # ← 追加（順番は quiz.js の直後）
+  - assets/js/quiz.progress.patch.js # ← 追加（順番は quiz.js の直後）
   - assets/js/exam.js
   - assets/js/dashboard.js
   # - assets/js/quiz.autoload.js  # （未使用: 存在しないため無効化）
