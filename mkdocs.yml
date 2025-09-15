@@ -17,6 +17,7 @@ extra_css:
   - assets/css/ch04.css
   - assets/css/ch05.css
   - assets/css/ch06.css
+  - assets/css/ch07.css
   - assets/css/teacher-ch05.css # ← 追加
   # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
@@ -64,6 +65,13 @@ nav:
       - 3. 返品・値引: ch06/03-returns-and-allowances.md
       - 4. 締めと突合: ch06/04-reconcile-and-tips.md
       - 章末クイズ: ch06/99-quiz.md
+  - 第7章 その他の債権・債務:
+      - 章の目次: ch07/index.md
+      - 1. まずは地図: ch07/01-overview.md
+      - 2. 前金・未収・未払: ch07/02-advance-and-unsettled.md
+      - 3. 立替・預り・仮払・仮受: ch07/03-employee-and-temp.md
+      - 4. 頻出パターン＆コツ: ch07/04-patterns-and-tips.md
+      - 章末クイズ: ch07/99-quiz.md
   - デザイン見本:
       - レッスン見本: prototypes/lesson-sample.md
       - クイズ見本: prototypes/quiz-sample.md
