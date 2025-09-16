@@ -1,10 +1,73 @@
 {
   "quizzes": [
     {
+      "quizId": "ch01",
+      "title": "第1章 スタートガイド（章末）",
+      "file": "ch01.json",
+      "page": "ch01/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch02",
+      "title": "第2章 取引→仕訳→転記→集計（章末）",
+      "file": "ch02.json",
+      "page": "ch02/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch03",
+      "title": "第3章 帳簿と伝票（章末）",
+      "file": "ch03.json",
+      "page": "ch03/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch04",
+      "title": "第4章 現金・預金（基礎）",
+      "file": "ch04.json",
+      "page": "ch04/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
       "quizId": "ch05",
       "title": "第5章 現金・預金",
       "file": "ch05.json",
-      "page": "ch05/index.html",
+      "page": "ch05/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch06",
+      "title": "第6章 売掛金・買掛金・クレジット売掛金（章末）",
+      "file": "ch06.json",
+      "page": "ch06/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch07",
+      "title": "第7章 その他の債権・債務（章末）",
+      "file": "ch07.json",
+      "page": "ch07/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch08",
+      "title": "第8章 手形・電子記録債権債務（章末）",
+      "file": "ch08.json",
+      "page": "ch08/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch09",
+      "title": "第9章 商品売買（三分法）・返品（章末）",
+      "file": "ch09.json",
+      "page": "ch09/99-quiz.html",
+      "basePath": "quizzes/"
+    },
+    {
+      "quizId": "ch10",
+      "title": "第10章 固定資産（取得・減価償却）（章末）",
+      "file": "ch10.json",
+      "page": "ch10/99-quiz.html",
       "basePath": "quizzes/"
     },
     {

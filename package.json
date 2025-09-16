@@ -17,7 +17,8 @@
     "textlint": "textlint \"**/*.md\"",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "prepare": "husky install",
-    "verify": "pnpm lint && pnpm typecheck && pnpm test"
+    "verify": "pnpm lint && pnpm typecheck && pnpm test",
+    "deploy": "scripts/deploy_site.sh"
   },
   "lint-staged": {
     "*.{ts,tsx,js,json,md}": [

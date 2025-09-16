@@ -10,4 +10,3 @@ describe('greet', () => {
     expect(greet('Taro', 'en')).toBe('Hello, Taro!');
   });
 });
-
