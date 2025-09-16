@@ -21,6 +21,7 @@ extra_css:
   - assets/css/ch07.css
   - assets/css/ch08.css
   - assets/css/ch09.css
+  - assets/css/ch10.css
   - assets/css/teacher-ch05.css # ← 追加
   # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
@@ -89,6 +90,13 @@ nav:
       - 3. 返品・値引: ch09/03-returns-and-allowances.md
       - 4. 期末のイメージ: ch09/04-period-end-idea-and-tips.md
       - 章末クイズ: ch09/99-quiz.md
+  - 第10章 固定資産（取得・減価償却）:
+      - 章の目次: ch10/index.md
+      - 1. 取得のキホン: ch10/01-acquisition-basics.md
+      - 2. 減価償却のキホン: ch10/02-depreciation-basics.md
+      - 3. 例題で定着: ch10/03-depreciation-examples.md
+      - 4. 修繕と改良: ch10/04-maintenance-vs-capex.md
+      - 章末クイズ: ch10/99-quiz.md
   - デザイン見本:
       - レッスン見本: prototypes/lesson-sample.md
       - クイズ見本: prototypes/quiz-sample.md
