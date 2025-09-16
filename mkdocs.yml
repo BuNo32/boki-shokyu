@@ -1,6 +1,6 @@
 site_name: 簿記初級ラボ
-site_url: "https://buno32.github.io/boki-shokyu-site/"
-repo_url: ""
+site_url: 'https://buno32.github.io/boki-shokyu-site/'
+repo_url: ''
 theme:
   name: material
   language: ja
@@ -15,23 +15,106 @@ use_directory_urls: false
 
 extra_css:
   - assets/css/site.css
+  - assets/css/tables-fix.css
+  - assets/css/ch01.css
+  - assets/css/ch02.css # ← 追加
+  - assets/css/ch03.css
+  - assets/css/ch04.css
+  - assets/css/ch05.css
+  - assets/css/ch06.css
+  - assets/css/ch07.css
+  - assets/css/ch08.css
+  - assets/css/ch09.css
+  - assets/css/ch10.css
+  - assets/css/ch11.css
+  - assets/css/teacher-ch05.css # ← 追加
+  # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
 nav:
   - はじめに: index.md
-  - 第1章 簿記の基本原理: ch01/index.md
-  - 第5章 現金・預金:
+  - 第1章 スタートガイド & 用語入門:
+      - 章の目次: ch01/index.md
+      - 1. なぜ簿記？: ch01/01-why-bookkeeping.md
+      - 2. 用語をやさしく: ch01/02-basic-terms.md
+      - 3. 借方・貸方: ch01/03-debit-credit.md
+      - 4. はじめての4列仕訳: ch01/04-first-journal.md
+      - 章末クイズ: ch01/99-quiz.md
+  - 第2章 取引→仕訳→転記→集計:
+      - 章の目次: ch02/index.md
+      - 1. 取引の正体: ch02/01-transaction.md
+      - 2. 仕訳帳: ch02/02-journal.md
+      - 3. 転記（元帳）: ch02/03-posting.md
+      - 4. 集計（試算表）: ch02/04-trial-balance.md
+      - 章末クイズ: ch02/99-quiz.md
+  - 第3章 帳簿と伝票:
+      - 章の目次: ch03/index.md
+      - 1. 帳簿の全体像と役割: ch03/01-overview.md
+      - 2. 伝票の使い分け: ch03/02-vouchers.md
+      - 3. 証ひょう→試算表の流れ: ch03/03-flow.md
+      - 4. 伝票フォームと運用のコツ: ch03/04-forms-and-tips.md
+      - 章末クイズ: ch03/99-quiz.md
+  - 第4章 現金・預金（基礎）:
+      - 章の目次: ch04/index.md
+      - 1. 現金・預金の素振り: ch04/01-basics.md
+      - 2. 手段→勘定のルール: ch04/02-methods-to-accounts.md
+      - 3. 10のパターン: ch04/03-ten-patterns.md
+      - 4. ミス対策チェック: ch04/04-errors-and-checklist.md
+      - 章末クイズ: ch04/99-quiz.md
+  - 第5章 現金・預金（応用）:
       - 章の目次: ch05/index.md
-      - 1節 勘定の性質と増減: ch05/01-basics.md
-      - 2節 よくある取引の型: ch05/02-patterns.md
-      - 3節 資金移動・利息・手数料: ch05/03-transfers.md
+      - 1. 銀行手数料と受取利息: ch05/01-fees-and-interest.md
+      - 2. 振込と差引入金（2行で解決）: ch05/02-transfers-advanced.md
+      - 3. 現金過不足: ch05/03-cash-over-short.md
+      - 4. 通帳の見方とメモ: ch05/04-passbook-and-notes.md
       - 章末クイズ: ch05/99-quiz.md
+  - 第6章 売掛金・買掛金・クレジット売掛金:
+      - 章の目次: ch06/index.md
+      - 1. 売掛・買掛の基本: ch06/01-ar-ap-basics.md
+      - 2. クレジット売掛金: ch06/02-credit-sales.md
+      - 3. 返品・値引: ch06/03-returns-and-allowances.md
+      - 4. 締めと突合: ch06/04-reconcile-and-tips.md
+      - 章末クイズ: ch06/99-quiz.md
+  - 第7章 その他の債権・債務:
+      - 章の目次: ch07/index.md
+      - 1. まずは地図: ch07/01-overview.md
+      - 2. 前金・未収・未払: ch07/02-advance-and-unsettled.md
+      - 3. 立替・預り・仮払・仮受: ch07/03-employee-and-temp.md
+      - 4. 頻出パターン＆コツ: ch07/04-patterns-and-tips.md
+      - 章末クイズ: ch07/99-quiz.md
+  - 第8章 手形・電子記録債権債務:
+      - 章の目次: ch08/index.md
+      - 1. 手形のキホン: ch08/01-notes-basics.md
+      - 2. 発生→決済（手形）: ch08/02-notes-transactions.md
+      - 3. 電子記録債権・債務: ch08/03-densai.md
+      - 4. コツ＆Q&A: ch08/04-tips-and-qa.md
+      - 章末クイズ: ch08/99-quiz.md
+  - 第9章 商品売買（三分法）・返品:
+      - 章の目次: ch09/index.md
+      - 1. 三分法のキホン: ch09/01-three-way-basics.md
+      - 2. 日常処理（現金・掛け・運賃）: ch09/02-daily-transactions.md
+      - 3. 返品・値引: ch09/03-returns-and-allowances.md
+      - 4. 期末のイメージ: ch09/04-period-end-idea-and-tips.md
+      - 章末クイズ: ch09/99-quiz.md
+  - 第10章 固定資産（取得・減価償却）:
+      - 章の目次: ch10/index.md
+      - 1. 取得のキホン: ch10/01-acquisition-basics.md
+      - 2. 減価償却のキホン: ch10/02-depreciation-basics.md
+      - 3. 例題で定着: ch10/03-depreciation-examples.md
+      - 4. 修繕と改良: ch10/04-maintenance-vs-capex.md
+      - 章末クイズ: ch10/99-quiz.md
+  - 第11章 純資産（資本金・元入・引出）:
+      - 章の目次: ch11/index.md
+      - 1. 純資産のキホン: ch11/01-equity-basics.md
+      - 2. 引出金の取り扱い: ch11/02-owner-drawings.md
+      - 3. 追加の元入・個人→事業の立替: ch11/03-additional-capital.md
+      - 4. 運用のコツ＆Q&A: ch11/04-tips-and-qa.md
+      - 章末クイズ: ch11/99-quiz.md
   - デザイン見本:
       - レッスン見本: prototypes/lesson-sample.md
       - クイズ見本: prototypes/quiz-sample.md
       - 模擬試験見本: prototypes/exam-sample.md
       - ダッシュボード: prototypes/dashboard.md
       - タイポグラフィ: prototypes/typography.md
-
 
 markdown_extensions:
   - admonition
@@ -45,5 +128,7 @@ plugins:
 
 extra_javascript:
   - assets/js/quiz.js
+  - assets/js/quiz.progress.patch.js # ← 追加（順番は quiz.js の直後）
   - assets/js/exam.js
   - assets/js/dashboard.js
+  # - assets/js/quiz.autoload.js  # （未使用: 存在しないため無効化）

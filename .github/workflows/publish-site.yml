@@ -63,5 +63,5 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: "docs: publish from ${{ github.repository }}@${{ github.sha }}"
+          commit_message: 'docs: publish from ${{ github.repository }}@${{ github.sha }}'
           keep_files: true
