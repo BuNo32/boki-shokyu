@@ -12,3 +12,6 @@ Thumbs.db
 
 # Node (将来使う場合に備え)
 node_modules/
+
+# Windows Mark of the Web artifacts (unwanted)
+*:Zone.Identifier
