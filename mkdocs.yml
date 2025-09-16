@@ -19,6 +19,7 @@ extra_css:
   - assets/css/ch06.css
   - assets/css/ch07.css
   - assets/css/ch08.css
+  - assets/css/ch09.css
   - assets/css/teacher-ch05.css # ← 追加
   # - assets/css/beginner-ch05.css   # （未使用: 存在しないため無効化）
 
@@ -80,6 +81,13 @@ nav:
       - 3. 電子記録債権・債務: ch08/03-densai.md
       - 4. コツ＆Q&A: ch08/04-tips-and-qa.md
       - 章末クイズ: ch08/99-quiz.md
+  - 第9章 商品売買（三分法）・返品:
+      - 章の目次: ch09/index.md
+      - 1. 三分法のキホン: ch09/01-three-way-basics.md
+      - 2. 日常処理（現金・掛け・運賃）: ch09/02-daily-transactions.md
+      - 3. 返品・値引: ch09/03-returns-and-allowances.md
+      - 4. 期末のイメージ: ch09/04-period-end-idea-and-tips.md
+      - 章末クイズ: ch09/99-quiz.md
   - デザイン見本:
       - レッスン見本: prototypes/lesson-sample.md
       - クイズ見本: prototypes/quiz-sample.md
