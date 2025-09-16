@@ -14,7 +14,7 @@ Usage:
 from __future__ import annotations
 import re, argparse, pathlib
 
-HEADER_RE = re.compile(r".+\|\s*借方科目\s*\|\s*金額\s*\|\s*貸方科目\s*\|\s*金額\s*\|")
+HEADER_RE = re.compile(r"\|\s*借方科目\s*\|\s*金額\s*\|\s*貸方科目\s*\|\s*金額\s*\|")
 
 DEFAULT_TARGETS = [
   "content/ch05/01-fees-and-interest.md",
@@ -45,6 +45,10 @@ def main():
     with p.open(encoding="utf-8") as f:
       for i, line in enumerate(f, start=1):
         if HEADER_RE.search(line):
+          # If the first non-space char is a pipe, this is a proper table header line; skip.
+          first = line.lstrip()[:1]
+          if first == "|":
+            continue
           print(f"[warn] {rel}:{i} Possible inline table header → {line.strip()[:96]}...")
           total += 1
 
