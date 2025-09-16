@@ -1,0 +1,9 @@
+content/assets/css/site-append-ch05.css
+content/ch05/01-basics.md
+content/ch05/02-patterns.md
+content/ch05/03-transfers.md
+content/ch05/99-quiz.md
+content/ch05/index.md
+content/quizzes/ch05-sec1.json
+content/quizzes/ch05-sec2.json
+content/quizzes/ch05-sec3.json

@@ -5,4 +5,3 @@ export function greet(name: string, lang: Lang = 'ja'): string {
 }
 
 export type { Lang } from './i18n';
-

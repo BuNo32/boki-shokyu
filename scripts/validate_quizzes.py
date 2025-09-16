@@ -10,8 +10,9 @@ with open(SCHEMA_PATH, "r", encoding="utf-8") as f:
 validator = Draft202012Validator(schema)
 
 for path in glob.glob(os.path.join("content", "quizzes", "*.json")):
-    # ダッシュボード用のインデックスはスキップ
-    if os.path.basename(path) in ("index.json", "schema.json"):
+    # ダッシュボード用のインデックス類はスキップ（index*.json 全て）
+    base = os.path.basename(path)
+    if base == "schema.json" or base.startswith("index"):
         continue
     with open(path, "r", encoding="utf-8") as f:
         try:
